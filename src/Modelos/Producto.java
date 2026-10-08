@@ -16,6 +16,9 @@ public class Producto {
      public Categoria getCategoria() {
         return this.categoria;
      }
+      public void setCategoria(Categoria categoria) {
+       this.categoria = categoria;
+     }
 
     public String getTipo() {
         return this.tipo;
