@@ -4,19 +4,21 @@ public class Producto {
     private String tipo;
     private String modelo;
     private double precio;
-    private String talle;
-    private String material;
+    private Categoria categoria;
 
-        public Producto(String tipo, String modelo, double precio, String talle, String material) {
+        public Producto(String tipo, String modelo, double precio, Categoria categoria) {
         this.tipo = tipo;
         this.modelo = modelo;
         this.precio = precio;
-        this.talle = talle;
+        this.categoria = categoria;
 
+     }
+     public Categoria getCategoria() {
+        return this.categoria;
      }
 
     public String getTipo() {
-        return tipo;
+        return this.tipo;
     }
 
     public void setTipo(String tipo) {
@@ -24,7 +26,7 @@ public class Producto {
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setModelo(String modelo) {
@@ -32,36 +34,21 @@ public class Producto {
     }
 
     public double getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public String getTalle() {
-        return talle;
-    }
 
-    public void setTalle(String talle) {
-        this.talle = talle;
-    }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public void setMaterial(String material) {
-        this.material = material;
-    }
 
     public String toString() {
         return "Producto{" +
                 "tipo='" + tipo + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", precio=" + precio +
-                ", talle='" + talle + '\'' +
-                ", material='" + material + '\'' +
+                ", categoria=" + categoria +
                 '}';
     }
 
