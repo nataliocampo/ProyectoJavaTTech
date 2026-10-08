@@ -12,8 +12,8 @@ public class Producto {
         this.modelo = modelo;
         this.precio = precio;
         this.talle = talle;
-        this.material = material;
-    }
+
+     }
 
     public String getTipo() {
         return tipo;
