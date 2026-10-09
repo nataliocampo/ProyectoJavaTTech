@@ -10,12 +10,12 @@ public class ContenedorArticulos {
    private ArrayList<Producto> productos;
 
     public ContenedorArticulos(ArrayList<Producto> productos) {
-        
+        this.productos = productos;
     }
 
     //LISTAR PRODUCTOS 
     public ArrayList<Producto> getProductos() {
-        ArrayList<Producto> copiaProductos = new ArrayList<>();
+        ArrayList<Producto> copiaProductos =this.productos;
         return copiaProductos;
     }
 
@@ -53,20 +53,10 @@ public class ContenedorArticulos {
 
     public boolean modificarProductoPorId(int id, Producto nuevoProducto) {
         if (id >= 0 && id < productos.size()) {
-           Producto productoExistente = productos.get(id);
-            productoExistente.setTipo(nuevoProducto.getTipo());
-            productoExistente.setModelo(nuevoProducto.getModelo());
-            productoExistente.setPrecio(nuevoProducto.getPrecio());
-            productoExistente.setCategoria(nuevoProducto.getCategoria());
-        return true; // mostrar mensaje valido      
-        }
-        else 
-        {
-            return false; //mostrar mensaje 
-        }
+        productos.set(id, nuevoProducto);
+        return true;
     }
-
-
-
+         return false;
+    }
 
 }
