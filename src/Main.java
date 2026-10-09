@@ -69,8 +69,10 @@ public class Main {
             case 2:{
             // Mostrar todos los productos
             ArrayList<Producto> productosLista = contenedor.getProductos();
+            int i =0 ;
                 for (Producto producto : productosLista) {
-                    System.out.println(producto.toString());
+                    System.out.println(i + ". " + producto.toString());
+                    i++;
                 }
             }
             break;
@@ -129,7 +131,11 @@ public class Main {
             
             System.out.println("Ingrese el ID del producto que desea eliminar:");
             int idProductoEliminar = scanner.getSint();
-            System.out.println("Va a eliminar producto" + contenedor.getProductoPorId(idProductoEliminar)    );
+            if(idProductoEliminar  < contenedor.getProductos().size()){
+                System.out.println("Va a eliminar producto" + contenedor.getProductoPorId(idProductoEliminar));
+               
+            }
+            
 
             //agregar si acepta o no que se elimine 
             if( contenedor.eliminarProductoPorId(idProductoEliminar)){

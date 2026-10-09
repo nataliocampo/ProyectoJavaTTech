@@ -36,9 +36,9 @@ public class Categoria {
     }
    public String toString() {
         return "Categoria{" +
-                "codigo=" + codigo +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
+                "codigo=" + this.codigo +
+                ", nombre='" + this.nombre + '\'' +
+                ", descripcion='" + this.descripcion + '\'' +
                 '}';
    }    
 }

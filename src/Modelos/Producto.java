@@ -47,11 +47,10 @@ public class Producto {
 
 
     public String toString() {
-        return "Producto{" +
-                "tipo='" + tipo + '\'' +
+        return  "tipo='" + tipo + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", precio=" + precio +
-                ", categoria=" + categoria +
+                  categoria +
                 '}';
     }
 

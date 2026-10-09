@@ -3,12 +3,21 @@ package Modelos;
 public class ProductoTemporada extends Producto{
 
 
-    public String tipoTemporada;
+    private String tipoTemporada;
 
-    public ProductoTemporada(String tipo, String modelo, double precio, String talle, String material,
-            String tipoTemporada) {
-        super(tipo, modelo, precio, talle, material);
+    public String getTipoTemporada() {
+        return tipoTemporada;
+    }
+
+    public void setTipoTemporada(String tipoTemporada) {
         this.tipoTemporada = tipoTemporada;
     }
 
+    public ProductoTemporada(String tipo, String modelo, double precio, String tipoTemporada, Categoria categoria) {
+        super(tipo, modelo, precio, categoria);
+        this.tipoTemporada = tipoTemporada;
+    }
+
+
+    
 }
